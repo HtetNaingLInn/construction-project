@@ -41,13 +41,13 @@
                   <div class="collapse navbar-collapse main-menu-item" id="navbarNav">
                      <ul class="navbar-nav">
                         <li class="nav-item active">
-                           <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="{{url('/')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="about.html">about</a>
+                        <a class="nav-link" href="{{url('about')}}">about</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link" href="{{url('service')}}">Services</a>
                         </li>
                         <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -118,7 +118,7 @@
          <div class="row">
             <div class="col-lg-12">
                <div class="footer_logo">
-                     <a href="index.html" class="footer_logo_iner"> <img src="img/footer_logo.png" alt="#"> </a>
+               <a href="index.html" class="footer_logo_iner"> <img src="{{asset('client/img/footer_logo.png')}}" alt="#"> </a>
                </div>
             </div>
 

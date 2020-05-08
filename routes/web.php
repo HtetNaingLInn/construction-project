@@ -22,6 +22,8 @@ Route::group( ['namespace'=>'client'], function () {
 
     Route::get('/','PageController@index');
     Route::get('cat/{id}','PageController@category');
+    Route::get('service','PageController@service');
+    Route::get('about','PageController@about');
     
 
 });

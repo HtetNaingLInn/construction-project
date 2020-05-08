@@ -48,16 +48,16 @@
                <a href="#" class="btn_1">learn More</a>
                <div class="about_part_counter">
                   <div class="single_counter">
-                     <span class="counter">100</span>
-                     <p>project</p>
+                  <span class="counter">{{count($allproject)}}</span>
+                     <p>Project</p>
                   </div>
                   <div class="single_counter">
-                     <span class="counter">300</span>
-                     <p>clients</p>
+                  <span class="counter">{{count($cats)}}</span>
+                     <p>Service</p>
                   </div>
                   <div class="single_counter">
-                     <span class="counter">150</span>
-                     <p>member</p>
+                  <span class="counter">{{count($users)}}</span>
+                     <p>Member</p>
                   </div>
                </div>
             </div>

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\client;
 
 use App\Blog;
+use App\User;
 use App\Project;
+use App\Service;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -18,75 +20,45 @@ class PageController extends Controller
     public function index()
     {
         $projects=Project::orderby('id','desc')->paginate('6');
-
+        $allproject=Project::all();
         $cats=Category::all();
 
         $blogs=Blog::orderby('id','desc')->paginate('4');
-        
-        return view('client.home.index',compact('projects','cats','blogs'));
+        $users=User::all();
+        return view('client.home.index',compact('projects','cats','blogs','allproject','users'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy($id)
     {
         //
@@ -101,4 +73,16 @@ class PageController extends Controller
         return view('client.home.cat',\compact('cats','projects'));
 
     }
+
+    public function service(){
+        $services=Service::orderby('id','desc')->paginate('4');
+        return view('client.service.service',\compact('services'));
+    }
+
+    public function about(){
+        return view ('client.about.about');
+    }
+
+
+    
 }
