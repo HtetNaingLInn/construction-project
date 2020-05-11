@@ -103,7 +103,7 @@
                            <div class="single_portfolio">
 
                               {{-- default Image For Testing --}}
-                           {{-- <img src="{{asset('client/img/project-1.png')}}" alt="" class="img-fluid w-100"> --}}
+                           <img src="{{asset('client/img/project-1.png')}}" alt="" class="img-fluid w-100">
 
 
 
@@ -227,12 +227,12 @@
 
                <img src="{{asset('client/img/blog_1.png')}}" alt="">
 
-               @if (count(unserialize($blog->image)))
+               {{-- @if (count(unserialize($blog->image)))
                <img class="img-fluid w-100" src="{{asset('/blog/'.unserialize($blog->image)[0]) }}" alt="">
 
                @else
                <img class="img-fluid w-100" src="{{asset('/blog/'.'default.jpg')}}" alt="">
-               @endif
+               @endif --}}
 
                </div>
                <div class="single_appartment_content">
