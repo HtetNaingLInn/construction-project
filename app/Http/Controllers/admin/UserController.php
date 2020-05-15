@@ -30,11 +30,12 @@ class UserController extends Controller
         $imageName=time().'_'.$image->getClientOriginalName();
         $image->move(\public_path().'/profile/',$imageName);
        
+        $password=$request->password;
         User::create
         ([
             'name'     =>$request->get('name'),
             'email'    =>$request->get('email'),
-            'password' =>$request->get('password'),
+            'password' =>Hash::make($password),
             'role'     =>$request->get('role'),
             'image'    =>$imageName
 
