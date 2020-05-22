@@ -3,7 +3,7 @@
 ### Installation
 
 ```
--git clone https://github.com/HtetNaingLInn/Covid-Information-Data.git PROJECT_FOLDER_NAME
+-git clone https://github.com/HtetNaingLInn/construction-project.git PROJECT_FOLDER_NAME
 -cd PROJECT_FOLDER_NAME
 -composer install
 -cp .env.example .env
